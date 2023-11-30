@@ -24,3 +24,10 @@ def pascal_triangle(n):
             row_index.append(1)
         new_pascal.append(row_index)
     return (new_pascal)
+
+
+# Example usage:
+# Uncomment the following lines to test the function with a specific value of n
+# n_value = 5
+# result = pascal_triangle(n_value)
+# print(result)
