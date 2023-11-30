@@ -4,14 +4,14 @@ of integers representing the Pascal's triangle of n """
 
 
 def pascal_triangle(n):
-    """ creates a pascal triangle
+    """ Generates Pascal's triangle up to n rows.
     n:
         number of rows
     return:
-        Pascal's triangle """
+        list of lists: Pascal's triangle up to n rows. """
     new_pascal = []
 
-    """ Assumes that n is an integer """
+    """ Assumes that n is a non-negative integer """
     if n <= 0:
         return new_pascal
 
