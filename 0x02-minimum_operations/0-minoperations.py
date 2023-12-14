@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 """
-This script defines a method for performing operations on a single character 'H' with two operations: Copy All and Paste.
-Given a number 'n', the goal is to calculate the minimum number of operations needed to result in exactly 'n' occurrences of 'H'.
+This script defines a method for performing operations on a single
+character 'H' with two operations: Copy All and Paste.
+Given a number 'n', the goal is to calculate the minimum number of
+operations needed to result in exactly 'n' occurrences of 'H'.
 
 Module Docstring:
 -----------------
