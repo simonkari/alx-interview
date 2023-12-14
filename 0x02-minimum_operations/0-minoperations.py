@@ -29,7 +29,8 @@ def minOperations(n):
     Returns:
     --------
     int
-        The minimum number of operations required to achieve 'n' occurrences of 'H'.
+        The minimum number of operations required to achieve
+        'n' occurrences of 'H'.
         Returns 0 if it is impossible to achieve 'n'.
     """
 
