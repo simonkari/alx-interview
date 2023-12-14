@@ -34,7 +34,8 @@ def minOperations(n):
         Returns 0 if it is impossible to achieve 'n'.
     """
 
-    # Base case: If n is less than or equal to 1, no operations are needed.
+    # Base case: If n is less than or equal to 1, no 
+    #operations are needed.
     if n <= 1:
         return 0
 
