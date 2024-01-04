@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-'''
-determines if a given data set represents a valid utf-8 encoding
-'''
+'''determines if a given data set represents a valid utf-8 encoding'''
 
 
 def validUTF8(data):
@@ -10,13 +8,13 @@ def validUTF8(data):
 
     # looping through dataset
     for num in data:
-        # Binary representation
-        # Least significant 8-bits
+        # get binary representation
+        # get least significant 8-bits
         binaryRepresentation = format(num, '#010b')[-8:]
 
-        # No bytes then process new utf-8 character
+        # if no bytes then process new utf-8 character
         if numberOfBytes == 0:
-            # Number of 1s at beginning of string
+            # get number of 1s at beginning of string
             for bit in binaryRepresentation:
                 if bit == '0':
                     break
