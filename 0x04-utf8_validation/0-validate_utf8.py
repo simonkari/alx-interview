@@ -14,7 +14,7 @@ def validUTF8(data):
         # Least significant 8-bits
         binaryRepresentation = format(num, '#010b')[-8:]
 
-        # No bytes, process new utf-8 character
+        # No bytes then process new utf-8 character
         if numberOfBytes == 0:
             # Number of 1s at beginning of string
             for bit in binaryRepresentation:
