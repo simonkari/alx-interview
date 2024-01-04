@@ -1,18 +1,14 @@
 #!/usr/bin/python3
 """
-Method to determine if given data represents valid UTF-8 encoding
-Prototype: def validUTF8(data)
-Returns True if data is valid UTF-8 encoding, else return False
-Dataset can contain multiple characters
-Data will represent a list of integers
+UTF-8 Validation
 """
 
 
 def validUTF8(data):
     """
     Prototype: def validUTF8(data)
-    Returns True if data is valid UTF-8 encoding
-    else return False
+    Determines if a given data set
+    represents a valid UTF-8 encoded
     """
     count = 0
 
