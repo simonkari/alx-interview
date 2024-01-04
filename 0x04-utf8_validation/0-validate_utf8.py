@@ -1,35 +1,38 @@
 #!/usr/bin/python3
-'''determines if a given data set represents a valid utf-8 encoding'''
+"""
+Method to determine if given data represents valid UTF-8 encoding
+Prototype: def validUTF8(data)
+Returns True if data is valid UTF-8 encoding, else return False
+Dataset can contain multiple characters
+Data will represent a list of integers
+"""
 
 
 def validUTF8(data):
-    # number of bytes
-    numberOfBytes = 0
+    """
+    Prototype: def validUTF8(data)
+    Returns True if data is valid UTF-8 encoding
+    else return False
+    """
+    count = 0
 
-    # looping through dataset
-    for num in data:
-        # get binary representation
-        # get least significant 8-bits
-        binaryRepresentation = format(num, '#010b')[-8:]
-
-        # if no bytes then process new utf-8 character
-        if numberOfBytes == 0:
-            # get number of 1s at beginning of string
-            for bit in binaryRepresentation:
-                if bit == '0':
-                    break
-                numberOfBytes += 1
-
-            if numberOfBytes == 0:
-                continue
-
-            if numberOfBytes == 1 or numberOfBytes > 4:
+    for bit in data:
+        binary = bin(bit).replace('0b', '').rjust(8, '0')[-8:]
+        if count == 0:
+            if binary.startswith('110'):
+                count = 1
+            if binary.startswith('1110'):
+                count = 2
+            if binary.startswith('11110'):
+                count = 3
+            if binary.startswith('10'):
                 return False
-
         else:
-            if not (binaryRepresentation[0] == '1' and binaryRepresentation[1] == '0'):
+            if not binary.startswith('10'):
                 return False
+            count -= 1
 
-        numberOfBytes -= 1
+    if count != 0:
+        return False
 
-    return numberOfBytes == 0
+    return True
