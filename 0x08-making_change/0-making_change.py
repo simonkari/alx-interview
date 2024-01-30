@@ -7,8 +7,8 @@ with varying values to reach a specified total amount.
 
 def makeChange(coins, total):
     """
-    given a pile of coins of different values, determine the fewest
-    number of coins needed to meet a given amount total
+    Find the minimum number of coins required from a stack of coins
+    with varying values to reach a specified total amount.
     """
     sum = 0
     if (total <= 0):
