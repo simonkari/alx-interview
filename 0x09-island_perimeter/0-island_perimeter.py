@@ -6,7 +6,9 @@
 
 
 def island_perimeter(grid):
-    """return the perimeter of the island described in grid"""
+    """
+    return the perimeter of the island described in grid
+    """
     perimeter = 0
     i = 0
     while i < len(grid):
