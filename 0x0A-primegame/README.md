@@ -1,1 +1,6 @@
-Prime game
+# 0x0A-primegame
+
+
+
+### Tasks
+0. Prime Game 
